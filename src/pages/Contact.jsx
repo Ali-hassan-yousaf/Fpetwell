@@ -17,7 +17,7 @@ const WorkersApp = () => {
   useEffect(() => {
     const fetchWorkers = async () => {
       try {
-        const response = await fetch("https://pet-well.vercel.app/api/worker");
+        const response = await fetch("https://pet-well-zuxu.vercel.app/api/worker");
         const data = await response.json();
         setWorkers(data || []);
       } catch (error) {
@@ -71,7 +71,7 @@ const WorkersApp = () => {
     };
 
     try {
-      const response = await fetch("https://pet-well.vercel.app/api/worker/", {
+      const response = await fetch("https://pet-well-zuxu.vercel.app/api/worker/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newWorker),
